@@ -1,0 +1,16 @@
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+footer h5{
+    width:max-content;
+    margin:2px;
+    font-size: 0.9rem;
+    color: rgb(37, 37, 37);
+   
+}
+footer a{
+    color: rgb(37, 37, 37);
+}

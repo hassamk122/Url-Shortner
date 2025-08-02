@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Url Shortner</title>
+     <link rel="icon" type="image/svg+xml" href="/images/link.svg">
+    <link rel="stylesheet" href="/styles/main.css" />
+     <link rel="stylesheet" href="/styles/form.css" />
+      <link rel="stylesheet" href="/styles/alert.css" />
+            <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+  <body>
+<script type="module" src="/scripts/alert.js" defer></script>
+<script type="module" src="/scripts/main.js" defer></script>
+
+    <div  id="alert-container">
+      <div id="custom-alert" class="alert-box">
+     <p id="alert-message">This is a custom alert</p>
+     <button id="alert-close">OK</button>
+  </div>
+</div>
+
+    <h1 class="header-text"><span class="emoji">🔗</span>Url Shortner</h1>
+<main>
+  <form id="url-form">
+  <div class="input-div">
+    
+    <label for="url-input">Enter URL :</label>
+    <input type="text" id="url-input" name="url" placeholder="https://www.example.com" />
+  </div>
+  <button type="submit" id="submit-btn">Generate</button>
+</form>
+
+   <div id="output-div">
+      <h4 id="label-output">Shortend Url : </h4>
+      <div id="generated-url">
+      </div>
+      </div>        
+</main>
+<footer>
+  <h5>Made by <a href="https://hassamkiani.site" target="_blank">Muhammad Hassam</a> </h5>
+</footer>
+  </body>
+</html>
