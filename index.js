@@ -4,15 +4,15 @@ const staticRouter = require('./routes/staticRouter');
 const connectToMongoDB = require('./connect');
 const path = require('path');
 const app = express();
-const PORT = 8080;
 const dotenv = require('dotenv');
 dotenv.config({ path: path.resolve(__dirname, '.env') });
 
+const PORT = process.env.PORT;
 
 
 
-// console.log('Connecting to MongoDB:', process.env.DATABASE_URL);
-connectToMongoDB("mongodb://localhost:27017/short-url");
+
+connectToMongoDB(process.env.DATABASE_URL);
 
 app.set('view engine','ejs');
 app.set('views',path.resolve('./views'));

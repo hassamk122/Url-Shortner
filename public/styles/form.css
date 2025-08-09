@@ -1,80 +1,87 @@
-form {
+
+form, 
+#generated-url, 
+#generated-para, 
+#generated-url button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+form {
   flex-direction: column;
 }
+
 label {
   font-size: 1.25rem;
   font-weight: 700;
   margin-top: 0.5rem;
 }
 
+.input-div {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  background-color: #fff;
+  padding: 15px 40px;
+  width: 40rem;
+  height: 3.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border: 2px solid rgb(37, 37, 37);
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* Output Section */
 #output-div {
   margin: 3rem;
   display: none;
   flex-direction: column;
 }
 
-
-#generated-url{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
 #generated-para {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: row;
-  gap: 5;
+  gap: 5px;
   padding: 15px 40px;
   min-width: 40rem;
+  height: 3.5rem;
   font-size: 1.25rem;
   font-weight: 400;
   background-color: rgb(61, 61, 61);
   border: 2px solid rgb(37, 37, 37);
   overflow: hidden;
 }
+
 #generated-para a {
   text-align: left;
   color: white;
   font-size: 1.25rem;
   font-weight: 700;
 }
+
+/* Buttons */
 #generated-url button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: white;
   border: 2px solid rgb(37, 37, 37);
-  box-shadow: 2px 2px 0px 1px rgb(37, 37, 37, 0.3);
+  box-shadow: 2px 2px 0px 1px rgba(37, 37, 37, 0.3);
   font-size: 1.25rem;
   font-weight: 700;
   cursor: pointer;
 }
+
 #copy-btn {
   padding: 5px 10px;
   font-size: 1rem;
   margin: 5px;
-}
-.input-div {
-  display: flex;
-  flex-direction: column;
-}
-input {
-  background-color: rgb(255, 255, 255);
-  padding: 15px 40px;
-  min-width: 40rem;
-  font-size: 1.25rem;
-  font-weight: 700;
-  border: 2px solid rgb(37, 37, 37);
-  margin-top: 0.5rem;
-  &:focus {
-    outline: none;
-  }
+  height: 3.5rem;
 }
 
 #submit-btn {
@@ -86,82 +93,76 @@ input {
   cursor: pointer;
   position: relative;
   margin-top: 0.5rem;
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transition: box-shadow 0.3s ease;
-  }
-  &:hover::after {
-    /* box-shadow: offset-x offset-y blur-radius spread-radius color inset; */
-    box-shadow: 3px 3px 0px 3px rgb(37, 37, 37);
-  }
 }
 
-#label-output {
-  text-align: center;
-  font-size: 1.25rem;
-  font-weight: 700;
+#submit-btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: box-shadow 0.3s ease;
 }
+
+#submit-btn:hover::after {
+  box-shadow: 3px 3px 0px 3px rgb(37, 37, 37);
+}
+
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
   #submit-btn {
     padding: 5px 15px;
     font-size: 1.15rem;
-    &:hover::after {
-      box-shadow: 2px 2px 0px 2px rgb(37, 37, 37);
-    }
+  }
+  #submit-btn:hover::after {
+    box-shadow: 2px 2px 0px 2px rgb(37, 37, 37);
   }
   input {
-    background-color: rgb(255, 255, 255);
     padding: 7px 20px;
-    min-width: 20rem;
+    width: 20rem;
     font-size: 1.05rem;
   }
   label {
-  font-size: 1.05rem;
-}
-#generated-para {
-  padding: 7px 20px;
-  min-width: 18rem;
-}
-#generated-para a {
-  font-size: 0.9rem;
-
-}
-#generated-url button {
-  font-size: 0.9rem;
-}
-#label-output {
-  white-space: normal;
-  font-size: 1.05rem;
-  font-weight: 700;
-  width: 18rem;
-}
+    font-size: 1.05rem;
+  }
+  #generated-para {
+    padding: 7px 20px;
+    width: 20rem;
+    min-width: 18rem;
+  }
+  #generated-para a {
+    font-size: 0.9rem;
+  }
+  #generated-url button {
+    font-size: 0.9rem;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   #submit-btn {
     padding: 10px 30px;
     font-size: 1.35rem;
-    &:hover::after {
-      box-shadow: 2px 2px 0px 2px rgb(37, 37, 37);
-    }
+  }
+  #submit-btn:hover::after {
+    box-shadow: 2px 2px 0px 2px rgb(37, 37, 37);
   }
   input {
-    background-color: rgb(255, 255, 255);
     padding: 15px 40px;
     min-width: 30rem;
     font-size: 1.35rem;
   }
   label {
-  font-size: 1.35rem;
-}
-#generated-url button {
-
-  font-size: 1.45rem;
-
-}
+    font-size: 1.35rem;
+  }
+  #generated-url button {
+    font-size: 1.45rem;
+  }
 }
