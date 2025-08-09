@@ -37,13 +37,13 @@ form.addEventListener("submit", async (e) => {
     outputDiv.style.display = "flex";
     generatedUrlDiv.innerHTML = `
         <p id="generated-para">
-              <a href="http://localhost:8080/${data.id}" target="_blank">
-               http://localhost:8080/${data.id}
+              <a href="${window.location.origin}/${data.id}" target="_blank">
+               ${window.location.origin}/${data.id}
              </a>
               
          </p><button id="copy-btn">📋</button>`;
     document.getElementById("copy-btn").addEventListener("click", () => {
-      const urlToCopy = `http://localhost:8080/${data.id}`;
+     const urlToCopy = `${window.location.origin}/${data.id}`;
       navigator.clipboard
         .writeText(urlToCopy)
         .then(() => showAlert("Copied to clipboard!"))
